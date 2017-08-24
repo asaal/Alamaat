@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="alamaat" Class="alamaatDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=alamaat.db.9331593.hostedresource.com;Initial Catalog=alamaat;User ID=alamaat" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="alamaatConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.User_Master" Member="User_Masters">
+    <Type Name="User_Master">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tilte" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.alamaat_Orders" Member="alamaat_Orders">
+    <Type Name="alamaat_Order">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="order_number" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="subtotal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="discount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="tax" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="orderstatus" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastmodified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shipment" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shippingtotal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="lastedit" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipfirstname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shiplastname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipmiddlename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipcompanyname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipaddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="shippostalcode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipcity" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipcountry" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipphone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipmobilephone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shipfax" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billfirstname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billlastname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billmiddlename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billcompanyname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billemail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billaddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="billpostalcode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billcity" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billcountry" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billphone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billmobilephone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="billfax" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="alamaat_Order_Order_product" Member="Order_products" ThisKey="id" OtherKey="order_id" Type="Order_product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.alamaat_Users" Member="alamaat_Users">
+    <Type Name="alamaat_User">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="middlename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="usertype" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="block" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="activation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastmodified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastlogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="province" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="postalcode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="mobilephone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="companyname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="fax" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.product_category" Member="product_categories">
+    <Type Name="product_category">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="product_category_alamaat_product" Member="alamaat_products" ThisKey="id" OtherKey="category" Type="alamaat_product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Order_products" Member="Order_products">
+    <Type Name="Order_product">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="order_id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="discount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="cartid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="product_id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="alamaat_Order_Order_product" Member="alamaat_Order" ThisKey="order_id" OtherKey="id" Type="alamaat_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileMaster" Member="FileMasters">
+    <Type Name="FileMaster">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="filecontent" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FileMaster_ProductThumb" Member="ProductThumbs" ThisKey="id" OtherKey="fileid" Type="ProductThumb" />
+    </Type>
+  </Table>
+  <Table Name="dbo.alamaat_subscriber" Member="alamaat_subscribers">
+    <Type Name="alamaat_subscriber">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductThumb" Member="ProductThumbs">
+    <Type Name="ProductThumb">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fileid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="filecontent" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FileMaster_ProductThumb" Member="FileMaster" ThisKey="fileid" OtherKey="id" Type="FileMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.alamaat_products" Member="alamaat_products">
+    <Type Name="alamaat_product">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="productname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="category" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastmodified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fileid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="originalprice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="product_category_alamaat_product" Member="product_category" ThisKey="category" OtherKey="id" Type="product_category" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

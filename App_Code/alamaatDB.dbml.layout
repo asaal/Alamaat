@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 12.375" name="alamaatDB">
+  <DataContextMoniker Name="/alamaatDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8de88f49-4b79-40ec-85ca-c208491dfa65" absoluteBounds="3.25, 4.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/alamaatDBDataContext/User_Master" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59291198-0c8c-4bda-b1b8-cc9a02beb336" absoluteBounds="3.265, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bbd24ac3-5a1e-4d92-a20e-4189a855b4fb" absoluteBounds="8.375, 4.625, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/alamaatDBDataContext/alamaat_Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6443594-3c5e-40c5-9567-688a0ec57f84" absoluteBounds="8.39, 5.085, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d803331d-a593-4949-9101-f606087c5f50" absoluteBounds="0.625, 3.625, 2, 5.4246240234375">
+      <DataClassMoniker Name="/alamaatDBDataContext/alamaat_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b223d996-4c77-40aa-acd1-cbc4c6adf371" absoluteBounds="0.64000000000000012, 4.085, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a01f4d54-61b1-4ede-8a5f-eea5b4446008" absoluteBounds="9.375, 1.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/alamaatDBDataContext/product_category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3acf15a-e865-48d0-96ac-8b83bc250978" absoluteBounds="9.39, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6db938a1-a6ff-4154-bcb8-e8e0d42f7fd5" absoluteBounds="5.625, 3.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/alamaatDBDataContext/Order_product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="490a96ea-ecfb-486a-95e8-257cc098fd11" absoluteBounds="5.64, 3.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 5.42870198567708); (7.625 : 5.42870198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alamaatDBDataContext/alamaat_Order/alamaat_Order_Order_product" />
+      <nodes>
+        <classShapeMoniker Id="bbd24ac3-5a1e-4d92-a20e-4189a855b4fb" />
+        <classShapeMoniker Id="6db938a1-a6ff-4154-bcb8-e8e0d42f7fd5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a847e00b-6fa1-4f55-9b05-6af48de1c676" absoluteBounds="3.5, 1.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/alamaatDBDataContext/FileMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fe9fa71-6906-4975-a08a-0369964aa225" absoluteBounds="3.5149999999999997, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99a64cf1-6636-40d8-9d5e-ecfe0b9255e8" absoluteBounds="0.875, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/alamaatDBDataContext/alamaat_subscriber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3399517f-f2fd-49aa-a14f-17ecc1bc1c61" absoluteBounds="0.89000000000000012, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be313c61-ceef-442c-849f-76aa54965e15" absoluteBounds="6, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/alamaatDBDataContext/ProductThumb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="daf5d3d6-6156-4e3a-bd05-717b78455d77" absoluteBounds="6.015, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.08255126953125); (6 : 2.08255126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alamaatDBDataContext/FileMaster/FileMaster_ProductThumb" />
+      <nodes>
+        <classShapeMoniker Id="a847e00b-6fa1-4f55-9b05-6af48de1c676" />
+        <classShapeMoniker Id="be313c61-ceef-442c-849f-76aa54965e15" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="359e16cb-8321-4e86-b971-7ca48e1d025f" absoluteBounds="12.75, 1.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/alamaatDBDataContext/alamaat_product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70f9b3fc-736f-4c2f-b573-b05349fdf2e2" absoluteBounds="12.765, 1.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.375 : 2.22199625651042); (12.75 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/alamaatDBDataContext/product_category/product_category_alamaat_product" />
+      <nodes>
+        <classShapeMoniker Id="a01f4d54-61b1-4ede-8a5f-eea5b4446008" />
+        <classShapeMoniker Id="359e16cb-8321-4e86-b971-7ca48e1d025f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
