@@ -107,7 +107,7 @@ public partial class registration : System.Web.UI.Page
                 smtp.Port = 587;
                 smtp.EnableSsl = true;
                 smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                smtp.Credentials = new System.Net.NetworkCredential("qau.asad@gmail.com", "nazarh504");
+                smtp.Credentials = new System.Net.NetworkCredential("youremail", "XXXXXX");
                 smtp.Timeout = 20000;
             }
             // Passing values to smtp object
